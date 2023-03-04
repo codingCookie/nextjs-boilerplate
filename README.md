@@ -11,8 +11,6 @@ I've added some packages to make it easiert to start with a new project.
   - ConfigFile `next-sitemap.js` added to root folder
 - .hintrc > check a11y issues with [webhint](https://webhint.io/) in [VS Code](https://webhint.io/docs/user-guide/extensions/vscode-webhint/)
 
-## Files added to
-
 ## Getting Started
 
 First, run the development server:

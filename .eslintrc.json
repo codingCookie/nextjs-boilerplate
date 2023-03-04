@@ -1,0 +1,47 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:react/recommended", // React rules
+    "plugin:react/jsx-runtime", // Use the new JSX transform
+    "plugin:react-hooks/recommended", // React hooks rules
+    // "plugin:jsx-a11y/recommended", // Accessibility rules (disabled for now - throws errors not warnings- and we don't have a focus on accessibility at the moment)
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:@next/next/recommended",
+    "prettier" // Prettier plugin
+  ],
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "parser": "@typescript-eslint/parser",
+      "extends": [
+        "plugin:@typescript-eslint/recommended" // TypeScript rules
+      ],
+      "rules": {
+        "react-hooks/exhaustive-deps": "off",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/ban-ts-comment": "warn", // tmp rule to allow ts-ignore - TODO schould be removed later on
+        "@typescript-eslint/explicit-function-return-type": [
+          "warn",
+          {
+            "allowExpressions": true
+          }
+        ]
+      }
+    }
+  ],
+  "plugins": ["react-hooks", "prettier", "no-relative-import-paths"],
+  "rules": {
+    "react-hooks/rules-of-hooks": "warn", // Checks rules of Hooks
+    "react/display-name": "off",
+    "prettier/prettier": "error",
+    "no-relative-import-paths/no-relative-import-paths": "warn" // tmp setting this to warn for now - will be error later on
+    // No need to import React when using Next.js
+    // "react/react-in-jsx-scope": "off",
+    // This rule is not compatible with Next.js's <Link /> components
+    // "jsx-a11y/anchor-is-valid": "off",
+    // otherwise we need PropType Validations
+    // "react/prop-types": "off"
+  }
+}

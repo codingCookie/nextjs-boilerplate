@@ -10,7 +10,6 @@ I've added some packages to make it easiert to start with a new project.
 - [next-sitemap](https://www.npmjs.com/package/next-sitemap) to create a Sitemap and a robots.txt
   - ConfigFile `next-sitemap.js` added to root folder
 - .hintrc > check a11y issues with [webhint](https://webhint.io/) in [VS Code](https://webhint.io/docs/user-guide/extensions/vscode-webhint/)
-- `dependabot.yml` > to keep dependencies up to date
 
 ## Getting Started
 
